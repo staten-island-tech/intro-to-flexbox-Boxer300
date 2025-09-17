@@ -2,5 +2,14 @@ html, body, *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; /* Normally 100% is 16px we want the size to be 10px so we do 62.5% */
+}
+.container{
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.child{
+    border:1px solid red;
+    width: 28%;
 }
