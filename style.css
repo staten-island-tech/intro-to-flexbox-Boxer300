@@ -7,24 +7,64 @@ html, body, *{
 .container{
     font-size: 30px;
     display: flex;
+    background-color: red;
     justify-content: space-around;
     object-fit: cover;
     width: 100vw;
 }
 .child{
     border:1px solid red;
-    width: 28%;
+    width: 22%;
 }
 .child-1{
-border: 3px solid green;
+border: 3px solid blue;
 object-fit:contain;
+justify-content: space-evenly;
 }
 .child-2{
-border: 3px solid yellow;
+border: 3px solid blue;
     object-fit: cover;
+    justify-content: space-evenly;
 }
 .child-3{
 border: 3px solid blue;
+justify-content: space-evenly;
+}
+.child-4{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-5{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-6{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-7{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-8{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-9{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-10{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-11{
+    border: 3px solid blue;
+    justify-content: space-evenly;
+}
+.child-12{
+    border: 3px solid blue;
+    justify-content: space-evenly;
 }
 .card-header{
     font-size: 20px;
