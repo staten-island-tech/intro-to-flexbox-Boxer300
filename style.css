@@ -7,10 +7,10 @@ html, body, *{
 .container{
     font-size: 30px;
     display: flex;
-    background-color: red;
+    background-color: wheat;
     justify-content: space-around;
-    object-fit: cover;
     width: 100vw;
+    flex-wrap: wrap;
 }
 .child{
     border:1px solid red;
@@ -28,6 +28,7 @@ border: 3px solid blue;
 }
 .child-3{
 border: 3px solid blue;
+object-fit: cover;
 justify-content: space-evenly;
 }
 .child-4{
