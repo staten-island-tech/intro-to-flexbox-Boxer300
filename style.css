@@ -17,54 +17,54 @@ html, body, *{
     width: 22%;
 }
 .child-1{
-border: 3px solid blue;
+    border: 10px solid green;
 object-fit:contain;
 justify-content: space-evenly;
 }
 .child-2{
-border: 3px solid blue;
+    border: 10px solid green;
     object-fit: cover;
     justify-content: space-evenly;
 }
 .child-3{
-border: 3px solid blue;
+    border: 10px solid green;
 object-fit: cover;
 justify-content: space-evenly;
 }
 .child-4{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-5{
-    border: 3px solid blue;
+      border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-6{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-7{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-8{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-9{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-10{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-11{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .child-12{
-    border: 3px solid blue;
+    border: 10px solid green;
     justify-content: space-evenly;
 }
 .card-header{
