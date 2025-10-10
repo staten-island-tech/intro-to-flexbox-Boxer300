@@ -5,7 +5,7 @@ const clothes = [
         inStock: true,
         brand: "Sponge bob",
         img: "https://phenomelitebrand.com/cdn/shop/files/SpongebobProductShot4_535x.png?v=1740765484",
-        alt: "Yellow cleats with Sponge bob",
+        alt: "Cleats",
     },
         {
         name: "Ukrainian Jersey",
@@ -13,7 +13,7 @@ const clothes = [
         inStock: true,
         brand: "Adidas",
         img: "img/116401-removebg-preview.png",
-        alt: "Yellow and blue soccer jersey",
+        alt: "Jersey",
     },    
            {
         name: "2022 World Cup Soccer Ball",
@@ -24,7 +24,7 @@ const clothes = [
         alt: "Soccer ball",
     },        {
         name: "Nike cleats",
-        price: 1̶0̶9̶.̶9̶9̶  89.99,
+        price: 89.99,
         inStock: true,
         brand: "Nike",
         img: "img/imgbin-nike-mercurial-vapor-football-boot-cleat-nike-FeKUXXVBpwvUrZ9cpgQUxBzrz-removebg-preview.png",
@@ -64,7 +64,7 @@ const clothes = [
     inStock: true,
     brand: "Liverpool",
     img: "img/t-shirt-liverpool-f-c-jersey-kit-t-shirt-removebg-preview.png",
-    alt: "jersey",
+    alt: "Jersey",
   },
   {
     name: "Nike soccer ball",
@@ -72,13 +72,13 @@ const clothes = [
     inStock: true,
     brand: "Nike",
     img: "img/soccer-ball-hk1099-premier-league-winter-ball-2018-19-11563421364hwhip7iy4d-removebg-preview.png",
-    alt: "ball",
+    alt: "Soccer ball",
   },
   {
     name: "Barcelona shorts",
     price: 14.99,
     inStock: true,
-    brand: "Barcelona",
+    brand: "Nike",
     img: "img/avuw9xoqg-removebg-preview.png",
     alt: "shorts",
   },
@@ -97,14 +97,7 @@ const clothes = [
     brand: "Generic",
     img: "img/mockup-of-a-white-sports-pant-free-png-removebg-preview.png",
     alt: "shorts",
-  },       {
-        name: "",
-        price: ,
-        inStock: true,
-        brand: "",
-        img: "",
-        alt: "",
-    }, 
+  },       
 ]
 function inject(item){
 const container = document.querySelector(".container");
