@@ -83,7 +83,7 @@ const clothes = [
     alt: "shorts",
   },
   {
-    name: "Black shorts",
+    name: "White shorts",
     price: 9.99,
     inStock: true,
     brand: "Generic",
@@ -91,7 +91,7 @@ const clothes = [
     alt: "shorts",
   },
   {
-    name: "White shorts",
+    name: "Black shorts",
     price: 9.99,
     inStock: true,
     brand: "Generic",
@@ -100,7 +100,9 @@ const clothes = [
   },       
 ]
 function inject(item){
+
+let name = "Barcelona shorts"
 const container = document.querySelector(".container");
-container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
 }
 inject ("clothes"[0]);
