@@ -101,8 +101,21 @@ const clothes = [
 ]
 function inject(item){
 
-let name = "Barcelona shorts"
+let name = "item.name"
 const container = document.querySelector(".container");
-container.insertAdjacentHTML("afterbegin", `<h1>${name}</h1>`);
+container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+}
+inject ("clothes"[0]);
+
+function inject(clothes) {
+  DOMSelectors.display.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="display-card">
+      <img class="display-img" src="${clothes.url}"/>
+      <h2 class="display-brand">${clothes.brand}</h2>
+      <h3 class="display-title">${clothes.title}</h3>
+      <button class="remove btn">Remove Album</button>
+    </div>`
+  );
 }
 inject ("clothes"[0]);
