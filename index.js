@@ -99,15 +99,15 @@ const clothes = [
     alt: "shorts",
   },       
 ]
-function inject(item){
+/* function inject(item){
 
 let name = "item.name"
 const container = document.querySelector(".container");
 container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
 }
 inject ("clothes"[0]);
-
-function inject(clothes) {
+ */
+/* function inject(clothes) {
   DOMSelectors.display.insertAdjacentHTML(
     "afterbegin",
     `<div class="display-card">
@@ -117,5 +117,35 @@ function inject(clothes) {
       <button class="remove btn">Remove Album</button>
     </div>`
   );
+/* /* } 
+inject ("clothes"[0]); */ 
+  // Simulated cart array
+  const cart = [];
+
+  // Function to add item to cart
+  function addToCart(event) {
+    const button = event.target;
+    const card = button.closest('.card'); // Find closest card element
+    const productName = card.querySelector('h3').textContent; // Example: get product name
+
+    cart.push(productName); // Add to simulated cart
+    console.log(`${productName} added to cart.`);
+    console.log('Current cart:', cart);
+  }
+
+  // Attach event listeners to all buttons
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', addToCart);
+  });
+function getCards() {
+  const buttons = document.querySelectorAll("button");
+  const btnArr = Array.from(buttons);
+  btnArr.forEach((btn) =>
+  btn.addEventListener("click", function (event) {
+  console.log(
+   event.target.closest(".display-card").getAttribute("data-title"),
+   event.target.textContent
+  );
+  }) 
+);
 }
-inject ("clothes"[0]);
