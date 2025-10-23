@@ -98,45 +98,51 @@ const clothes = [
     img: "img/mockup-of-a-white-sports-pant-free-png-removebg-preview.png",
     alt: "shorts",
   },       
-]
-// /* /* function inject(item){
+];
+addToCart();
+function addToCart() {
+  const buttons = document.querySelectorAll("button");
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) => btn/addEventListener("click", function(){
 
-// let name = "item.name"
-// const container = document.querySelector(".container");
-// container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
-// }
-// inject ("clothes"[0]);
-//  */
-// /* function inject(clothes) {
-//   DOMSelectors.display.insertAdjacentHTML(
-//     "afterbegin",
-//     `<div class="display-card">
-//       <img class="display-img" src="${clothes.url}"/>
-//       <h2 class="display-brand">${clothes.brand}</h2>
-//       <h3 class="display-title">${clothes.title}</h3>
-//       <button class="remove btn">Remove Album</button>
-//     </div>`
-//   );
-// /* /* } 
-// inject ("clothes"[0]); */ 
-//   // Simulated cart array
-//   const cart = [];
+ function inject(items){
+ let name = "item.name"
+ const container = document.querySelector(".container");
+ container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+ }
+   }))
+}
+ inject ("clothes"[0]);
+ /* function inject(clothes) {
+   DOMSelectors.display.insertAdjacentHTML(
+    "afterbegin",
+     `<div class="display-card">
+      <img class="display-img" src="${clothes.url}"/>
+       <h2 class="display-brand">${clothes.brand}</h2>
+      <h3 class="display-title">${clothes.title}</h3>
+       <button class="remove btn">Remove Album</button>
+    </div>`
+   );
+ } 
+ inject ("clothes"[0]); 
+   //Simulated cart array
+  const cart = [];  */
 
 //   // Function to add item to cart
-//   function addToCart(event) {
-//     const button = event.target;
-//     const card = button.closest('.card'); // Find closest card element
-//     const productName = card.querySelector('h3').textContent; // Example: get product name
+/*   function addToCart(event) {
+    const button = event.target;
+    const card = button.closest('.card'); // Find closest card element
+    const productName = card.querySelector('h3').textContent; // Example: get product name
 
-//     cart.push(productName); // Add to simulated cart
-//     console.log(`${productName} added to cart.`);
-//     console.log('Current cart:', cart);
-//   }
+    cart.push(productName); // Add to simulated cart
+    console.log(`${productName} added to cart.`);
+    console.log('Current cart:', cart);
+  }
 
-//   // Attach event listeners to all buttons
-//   document.querySelectorAll('.add-to-cart').forEach(button => {
-//     button.addEventListener('click', addToCart);
-//   });
+  // Attach event listeners to all buttons
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', addToCart);
+  }); */
 // function getCards() {
 //   const buttons = document.querySelectorAll("button");
 //   const btnArr = Array.from(buttons);
@@ -150,6 +156,3 @@ const clothes = [
 // );
 // }
  
-.button.addEventListener("click", function(){
-    backgroundAndText(.box, .text);
-});
