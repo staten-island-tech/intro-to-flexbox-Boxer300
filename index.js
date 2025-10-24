@@ -99,20 +99,20 @@ const clothes = [
     alt: "shorts",
   },       
 ];
-addToCart();
 function addToCart() {
   const buttons = document.querySelectorAll("button");
   const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) => btn/addEventListener("click", function(){
-
- function inject(items){
- let name = "item.name"
- const container = document.querySelector(".container");
- container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
- }
-   }))
+  btnArray.forEach((btn, index) => 
+    btn.addEventListener("click", function(event) {
+      console.log(
+        event.target.closest(".child-card").getAttribute("card-header"),
+      event.tartet.textContent
+    );
+  })
+);
 }
- inject ("clothes"[0]);
+clothes[3];
+addToCart();
  /* function inject(clothes) {
    DOMSelectors.display.insertAdjacentHTML(
     "afterbegin",
