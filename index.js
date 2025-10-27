@@ -105,7 +105,7 @@ function addToCart() {
   btnArray.forEach((btn, index) => 
     btn.addEventListener("click", function(event) {
       console.log(
-        event.target.closest(".child-card").getAttribute("card-header"),
+        event.target.closest(".child-card").getAttribute(".card-header"),
       event.tartet.textContent
     );
   })
@@ -113,6 +113,7 @@ function addToCart() {
 }
 clothes[3];
 addToCart();
+
  /* function inject(clothes) {
    DOMSelectors.display.insertAdjacentHTML(
     "afterbegin",
@@ -129,7 +130,7 @@ addToCart();
   const cart = [];  */
 
 //   // Function to add item to cart
-/*   function addToCart(event) {
+   function addToCart(event) {
     const button = event.target;
     const card = button.closest('.card'); // Find closest card element
     const productName = card.querySelector('h3').textContent; // Example: get product name
@@ -142,7 +143,7 @@ addToCart();
   // Attach event listeners to all buttons
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', addToCart);
-  }); */
+  });
 // function getCards() {
 //   const buttons = document.querySelectorAll("button");
 //   const btnArr = Array.from(buttons);
