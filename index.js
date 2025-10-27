@@ -97,8 +97,66 @@ const clothes = [
     brand: "Generic",
     img: "img/mockup-of-a-white-sports-pant-free-png-removebg-preview.png",
     alt: "shorts",
-  },       
+  },    
+  {
+  name: "Golden cleats",
+  price: 199.99,
+  inStock: true,
+  brand: "Nike",
+  img: "https://png.pngtree.com/png-vector/20250112/ourmid/pngtree-golden-football-cleat-clipart-illustration-png-image_15160443.png",
+  alt: "Cleats",
+},
+{
+  name: "Adidas MLS ball",
+  price: 9.99,
+  inStock: true,
+  brand: "Adidas",
+  img: "img/seo-gifts-for-soccer-fans-body-image-1_221-578642-removebg-preview.png",
+  alt: "Soccer ball",
+},
+{
+  name: "Orange and white cleats",
+  price: 99.99,
+  inStock: true,
+  brand: "Generic",
+  img: "img/pngtree-durable-soccer-cleats-for-outdoor-games-png-image_13451541-removebg-preview.png",
+  alt: "Cleats",
+},
+{
+  name: "Blue gloves",
+  price: 9.99,
+  inStock: true,
+  brand: "Nike",
+  img: "img/275-2754018_goal-keeping-glove-png-photo-background-nike-goalkeeper-removebg-preview.png",
+  alt: "Gloves",
+},
+{
+  name: "Red shorts",
+  price: 15.99,
+  inStock: true,
+  brand: "Adidas",
+  img: "img/461686s-removebg-preview.png",
+  alt: "Shorts",
+},
+{
+  name: "Red gloves",
+  price: 9.99,
+  inStock: true,
+  brand: "Adidas",
+  img: "img/pngtree-red-goalkeeper-gloves-png-image_16215402-removebg-preview.png",
+  alt: "Gloves",
+},
+{
+  name: "Blue and yellow gloves",
+  price: 9.99,
+  inStock: true,
+  brand: "Kipsta",
+  img: "img/620-6206722_goal-keeping-glove-png-transparent-image-kipsta-goalkeeper-removebg-preview.png",
+  alt: "Gloves",
+},   
 ];
+const cart = [];
+
 function addToCart() {
   const buttons = document.querySelectorAll("button");
   const btnArray = Array.from(buttons);
@@ -106,28 +164,13 @@ function addToCart() {
     btn.addEventListener("click", function(event) {
       console.log(
         event.target.closest(".child-card").getAttribute(".card-header"),
-      event.tartet.textContent
+      event.target.textContent
     );
   })
 );
 }
 clothes[3];
 addToCart();
-
- /* function inject(clothes) {
-   DOMSelectors.display.insertAdjacentHTML(
-    "afterbegin",
-     `<div class="display-card">
-      <img class="display-img" src="${clothes.url}"/>
-       <h2 class="display-brand">${clothes.brand}</h2>
-      <h3 class="display-title">${clothes.title}</h3>
-       <button class="remove btn">Remove Album</button>
-    </div>`
-   );
- } 
- inject ("clothes"[0]); 
-   //Simulated cart array
-  const cart = [];  */
 
 //   // Function to add item to cart
    function addToCart(event) {
@@ -156,4 +199,17 @@ addToCart();
 //   }) 
 // );
 // }
- 
+  /* function inject(clothes) {
+   DOMSelectors.display.insertAdjacentHTML(
+    "afterbegin",
+     `<div class="display-card">
+      <img class="display-img" src="${clothes.url}"/>
+       <h2 class="display-brand">${clothes.brand}</h2>
+      <h3 class="display-title">${clothes.title}</h3>
+       <button class="remove btn">Remove Album</button>
+    </div>`
+   );
+ } 
+ inject ("clothes"[0]); 
+   //Simulated cart array
+  const cart = [];  */
