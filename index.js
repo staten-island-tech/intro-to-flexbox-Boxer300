@@ -155,12 +155,26 @@ const clothes = [
   alt: "Gloves",
 },   
 ];
+clothes.forEach((item) => inject(item))
+function inject(clothes) {
+   document.querySelector(".container").insertAdjacentHTML(
+    "afterbegin",
+     `<div class="display-card">
+      <img class="display-img" src="${clothes.img}" />
+       <h2 class="display-brand">${clothes.brand} </h2>
+      <h3 class="display-title">${clothes.name} </h3>
+        <h3 class="card-price">$ ${clothes.price}</h3>
+       <button class="add-to-cart">Add to cart</button>
+    </div>`
+   );
+  }
+
 const cart = [];
 
 //   // Function to add item to cart
    function addToCart(event) {
     const button = event.target;
-    const card = button.closest('.child'); // Find closest card element
+    const card = button.closest('.display-card'); // Find closest card element
     const productName = card.querySelector('h3').textContent; // Example: get product name
 
     cart.push(productName); // Add to simulated cart
@@ -170,8 +184,15 @@ const cart = [];
 
   // Attach event listeners to all buttons
   document.querySelectorAll('.add-to-cart').forEach(button => {
-    console.log("Button found:", button);
-    button.addEventListener('click', addToCart);
+    button.addEventListener('click', function(event){
+       const button = event.target;
+    const card = button.closest('.display-card'); // Find closest card element
+    const productName = card.querySelector('h3').textContent; // Example: get product name
+
+    cart.push(productName); // Add to simulated cart
+    console.log(`${productName} added to cart.`);
+    console.log('Current cart:', cart);
+    });
   });
 // function getCards() {
 //   const buttons = document.querySelectorAll("button");
@@ -185,34 +206,19 @@ const cart = [];
 //   }) 
 // );
 // }
-clothes.forEach((item) => inject(item))
-function inject(clothes) {
-   document.querySelector(".container").insertAdjacentHTML(
+
+/*  function inject(clothes) {
+   .container.display.insertAdjacentHTML(
     "afterbegin",
      `<div class="display-card">
       <img class="display-img" src="${clothes.url}"/>
-       <h2 class="display-brand">${clothes.brand}</h2>
-      <h3 class="display-title">${clothes.title}</h3>
+      <h2 class="display-brand">${clothes.brand}</h2>
+     <h3 class="display-title">${clothes.title}</h3>
        <button class="remove btn">Remove Album</button>
-    </div>`
-   );}
-  /* function inject(clothes) {
-   DOMSelectors.display.insertAdjacentHTML(
-    "afterbegin",
-     `<div class="display-card">
-      <img class="display-img" src="${clothes.url}"/>
-       <h2 class="display-brand">${clothes.brand}</h2>
-      <h3 class="display-title">${clothes.title}</h3>
-       <button class="remove btn">Remove Album</button>
-    </div>`
+     </div>`
    );
- } 
- inject ("clothes"[0]); 
+ }   */
    //Simulated cart array
-  const cart = [];  */
-
-
-
 /*   function addToCart() {
   const buttons = document.querySelectorAll("button");
   const btnArray = Array.from(buttons);
