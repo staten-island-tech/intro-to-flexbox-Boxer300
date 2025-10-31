@@ -23,7 +23,7 @@ const clothes = [
         img: "img/hd-qatar-world-cup-2022-ball-png-7040816948791863showibkng-removebg-preview.png",
         alt: "Soccer ball",
     },        {
-        name: "Nike cleats",
+        name: "Cleats",
         price: 89.99,
         inStock: true,
         brand: "Nike",
@@ -62,12 +62,12 @@ const clothes = [
     name: "Liverpool Jersey",
     price: 34.99,
     inStock: true,
-    brand: "Liverpool",
+    brand: "New Balance",
     img: "img/t-shirt-liverpool-f-c-jersey-kit-t-shirt-removebg-preview.png",
     alt: "Jersey",
   },
   {
-    name: "Nike soccer ball",
+    name: "Soccer ball",
     price: 29.99,
     inStock: true,
     brand: "Nike",
@@ -83,7 +83,7 @@ const clothes = [
     alt: "shorts",
   },
   {
-    name: "White shorts",
+    name: "Black shorts",
     price: 9.99,
     inStock: true,
     brand: "Generic",
@@ -91,7 +91,7 @@ const clothes = [
     alt: "shorts",
   },
   {
-    name: "Black shorts",
+    name: "White shorts",
     price: 9.99,
     inStock: true,
     brand: "Generic",
@@ -107,7 +107,7 @@ const clothes = [
   alt: "Cleats",
 },
 {
-  name: "Adidas MLS ball",
+  name: "MLS ball",
   price: 9.99,
   inStock: true,
   brand: "Adidas",
@@ -169,7 +169,31 @@ function inject(clothes) {
    );
   }
 
+const cartSection = document.createElement("div");
+cartSection.classList.add("cart-section");
+
+const cartTitle = document.createElement("h2");
+cartTitle.textContent = "🛒 Your Cart";
+
+const cartList = document.createElement("ul");
+cartList.id = "cart-items";
+
+cartSection.appendChild(cartTitle);
+cartSection.appendChild(cartList);
+document.body.appendChild(cartSection);
+
 const cart = [];
+
+function updateCartDisplay() {
+  const cartList = document.getElementById("cart-items");
+  cartList.innerHTML = ""; // clear old list
+
+  cart.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    cartList.appendChild(li);
+  });
+}
 
 //   // Function to add item to cart
    function addToCart(event) {
@@ -179,7 +203,8 @@ const cart = [];
 
     cart.push(productName); // Add to simulated cart
     console.log(`${productName} added to cart.`);
-    console.log('Current cart:', cart);
+    updateCartDisplay();
+    /* console.log('Current cart:', cart); */
   }
 
   // Attach event listeners to all buttons
@@ -207,17 +232,6 @@ const cart = [];
 // );
 // }
 
-/*  function inject(clothes) {
-   .container.display.insertAdjacentHTML(
-    "afterbegin",
-     `<div class="display-card">
-      <img class="display-img" src="${clothes.url}"/>
-      <h2 class="display-brand">${clothes.brand}</h2>
-     <h3 class="display-title">${clothes.title}</h3>
-       <button class="remove btn">Remove Album</button>
-     </div>`
-   );
- }   */
    //Simulated cart array
 /*   function addToCart() {
   const buttons = document.querySelectorAll("button");
