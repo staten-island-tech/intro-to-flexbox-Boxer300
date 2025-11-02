@@ -173,42 +173,70 @@ const cartSection = document.createElement("div");
 cartSection.classList.add("cart-section");
 
 const cartTitle = document.createElement("h2");
-cartTitle.textContent = "🛒 Your Cart";
+cartTitle.textContent = "Your Cart";
 
 const cartList = document.createElement("ul");
 cartList.id = "cart-items";
 
+const cartTotal = document.createElement("p");
+cartTotal.id = "cart-total";
+cartTotal.textContent = "Total: $0.00";
+
 cartSection.appendChild(cartTitle);
 cartSection.appendChild(cartList);
-document.body.appendChild(cartSection);
+cartSection.appendChild(cartTotal);
 
+document.body.appendChild(cartSection);
 const cart = [];
 
 function updateCartDisplay() {
   const cartList = document.getElementById("cart-items");
-  cartList.innerHTML = ""; // clear old list
+  const cartTotal = document.getElementById("cart-total");
+
+  cartList.innerHTML = "";
+
+  let total = 0;
 
   cart.forEach((item) => {
     const li = document.createElement("li");
-    li.textContent = item;
+    li.textContent = `${item.name} — $${item.price.toFixed(2)}`;
     cartList.appendChild(li);
+    total += item.price;
   });
+
+  cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+}
+ function addToCart(event) {
+  const button = event.target;
+  const card = button.closest(".display-card");
+  const name = card.querySelector(".display-title").textContent;
+  const priceText = card.querySelector(".card-price").textContent.replace("$", "");
+  const price = parseFloat(priceText);
+
+  cart.push({ name, price });
+  updateCartDisplay();
 }
 
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("add-to-cart")) {
+    addToCart(event);
+  }
+});
+
 //   // Function to add item to cart
-   function addToCart(event) {
+/*    function addToCart(event) {
     const button = event.target;
     const card = button.closest('.display-card'); // Find closest card element
     const productName = card.querySelector('h3').textContent; // Example: get product name
 
     cart.push(productName); // Add to simulated cart
     console.log(`${productName} added to cart.`);
-    updateCartDisplay();
+    updateCartDisplay(); */
     /* console.log('Current cart:', cart); */
-  }
+  /* } */
 
   // Attach event listeners to all buttons
-  document.querySelectorAll('.add-to-cart').forEach(button => {
+/*   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', function(event){
        const button = event.target;
     const card = button.closest('.display-card'); // Find closest card element
@@ -218,7 +246,7 @@ function updateCartDisplay() {
     console.log(`${productName} added to cart.`);
     console.log('Current cart:', cart);
     });
-  });
+  }); */
 // function getCards() {
 //   const buttons = document.querySelectorAll("button");
 //   const btnArr = Array.from(buttons);

@@ -19,95 +19,12 @@ html, body, *{
      align-items: center;
      justify-content: space-around;
 }
-.child-1{
-    border: 10px solid green;
-object-fit:contain;
-justify-content: space-evenly;
-}
-.child-2{
-    border: 10px solid green;
-    object-fit: cover;
-    justify-content: space-evenly;
-}
-.child-3{
-    border: 10px solid green;
-object-fit: cover;
-justify-content: space-evenly;
-}
-.child-4{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-5{
-      border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-6{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-7{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-8{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-9{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-10{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-11{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-12{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-13{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-14{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-15{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-16{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-17{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-18{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-19{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.child-20{
-    border: 10px solid green;
-    justify-content: space-evenly;
-}
-.card-header{
-    font-size: 20px;
-}
-.card-price{
-    font-size: 20px
-}
 .display-img{
     width: 100%;
+}
+.cart-section {
+    font-size: 35px;
+    justify-content: space-around;
+    text-align: center;
+    background-color: orange;
 }
