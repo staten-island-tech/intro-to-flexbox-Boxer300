@@ -222,7 +222,15 @@ document.addEventListener("click", (event) => {
     addToCart(event);
   }
 });
-
+function filterByPrice(clothes){
+  if (clothes.price<15) {
+    console.log(cheap);
+  }
+    else {
+      console.log(expensive);
+    }
+  }
+filterByPrice()
 //   // Function to add item to cart
 /*    function addToCart(event) {
     const button = event.target;
