@@ -155,7 +155,7 @@ const clothes = [
   alt: "Gloves",
 },   
 ];
-clothes.forEach((item) => inject(item))
+/* clothes.forEach((item) => inject(item))
 function inject(clothes) {
    document.querySelector(".container").insertAdjacentHTML(
     "afterbegin",
@@ -221,16 +221,13 @@ document.addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart")) {
     addToCart(event);
   }
-});
-function filterByPrice(clothes){
-  if (clothes.price<15) {
-    console.log(cheap);
-  }
-    else {
-      console.log(expensive);
-    }
-  }
-filterByPrice()
+}); */
+function filter(brand){
+const filtered = clothes.filter(cloth => cloth.brand === brand);
+return filtered;
+}
+console.log(filter("Adidas"));
+
 //   // Function to add item to cart
 /*    function addToCart(event) {
     const button = event.target;
